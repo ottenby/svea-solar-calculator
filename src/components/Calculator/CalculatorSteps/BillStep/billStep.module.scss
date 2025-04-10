@@ -1,0 +1,12 @@
+.billStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 24px 0;
+  }
+}

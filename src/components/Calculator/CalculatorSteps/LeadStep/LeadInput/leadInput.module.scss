@@ -1,0 +1,9 @@
+.leadInput {
+  display: flex;
+  flex-direction: column;
+  height: 72px;
+
+  .error {
+    color: rgb(160, 18, 18);
+  }
+}

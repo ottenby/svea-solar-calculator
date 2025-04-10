@@ -1,0 +1,14 @@
+.calculatorLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  position: relative;
+  padding: 24px;
+
+  @media screen and (min-width: 992px) {
+    padding-top: 48px;
+  }
+}

@@ -1,0 +1,17 @@
+.progressIndicator {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 24px;
+
+  .progressListItem {
+    font-weight: bold;
+  }
+
+  .progressListItemCurrent {
+    font-weight: bolder;
+    border-bottom: 1px solid black;
+  }
+}

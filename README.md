@@ -1,5 +1,36 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+README
+
+I started off figuring out what a solar quote calculator is and gathered inspiration looking for similar applications. I realized that I will need to make some assumptions. Due to the time limit, I will not take into account what direction the solar panel is facing, geographical location or season and I will not handle the cases where production exceeds consumption. You can't sell electricity to the grid.
+
+Assumptions:
+Electricity cost 1 SEK per kWh.
+A solar panel produces 350 kWh/year.
+Swedish grid emits 0.4 kg CO2 per kWh.
+
+I will have a structure of the application's comoponents like this:
+
+Calculator
+-ProgressIndicator
+-Steps(electricity bill, roof size, results, lead, sucess)
+-Navigation
+
+I will use react-hook-form for validating the user data, and my own simple validation for completing the steps.
+
+In retrospect:
+-I would have liked to validate the steps in a cleaner way, using react-hook-form.
+-I should have handled nullcheck better. a reusable function or component, or if I managed to use react-hook-form for that. The submitfunction could validate the data.
+-I got some help from ai to do calculations on savings and co2 reduction.
+-I wish the mobile design for the progressIndicator was cleaner. It's always diffuclt with a progress bar in mobile, but scrollable on the x angle, to fit more padding between the list items could be one solution.
+-I wanted to make the list items in the progressIndicator clickable.
+-if I had time I would analyse the Performance and accessability more and I would write tests.
+-I wanted to do more accurate validation for email and phone.
+-I moved the step logic to a useContext and got rid of a lot of prop shuffling. Nice.
+-Wanted to add a nvmrc file to handle node version. Needs to be v19+
+
+-I think over all, this took me around 8-10 hours of development and some time for research
+
 ## Getting Started
 
 First, run the development server:
@@ -13,24 +44,3 @@ pnpm dev
 # or
 bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
