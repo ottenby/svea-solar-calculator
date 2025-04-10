@@ -13,7 +13,7 @@ I will have a structure of the application's comoponents like this:
 
 Calculator
 -ProgressIndicator
--Steps(electricity bill, roof size, results, lead, sucess)
+-Steps(electricity bill, roof size, results, lead, success)
 -Navigation
 
 I will use react-hook-form for validating the user data, and my own simple validation for completing the steps.
@@ -26,8 +26,9 @@ In retrospect:
 -I wanted to make the list items in the progressIndicator clickable.
 -if I had time I would analyse the Performance and accessability more and I would write tests.
 -I wanted to do more accurate validation for email and phone.
+-scss variables and mixins for screen breakpoints and reusable content.
+-Wanted to add a nvmrc file to handle node version. Needs to be v19+.
 -I moved the step logic to a useContext and got rid of a lot of prop shuffling. Nice.
--Wanted to add a nvmrc file to handle node version. Needs to be v19+
 
 -I think over all, this took me around 8-10 hours of development and some time for research
 
